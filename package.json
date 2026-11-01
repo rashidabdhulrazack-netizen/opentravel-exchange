@@ -1,0 +1,23 @@
+{
+  "name": "opentravel-exchange",
+  "version": "1.0.0",
+  "description": "Open standard data exchange and schema engine for travel operators",
+  "main": "validator/index.js",
+  "type": "module",
+  "scripts": {
+    "validate": "node validator/index.js"
+  },
+  "keywords": [
+    "travel",
+    "open-source",
+    "schema",
+    "json-schema",
+    "b2b"
+  ],
+  "author": "Rashid Abdhulrazack",
+  "license": "MIT",
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
+  }
+}
