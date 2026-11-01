@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opentravel-exchange.org/schemas/package.schema.json",
+  "title": "TravelPackage",
+  "description": "Standard specification for multi-day B2B travel itineraries, components, and pricing tiers",
+  "type": "object",
+  "required": [
+    "id",
+    "operatorId",
+    "title",
+    "destination",
+    "durationDays",
+    "pricing",
+    "itinerary"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique identifier for the travel package"
+    },
+    "operatorId": {
+      "type": "string",
+      "description": "Unique registration ID of the DMC or B2B travel operator"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 150,
+      "description": "Marketing title of the package"
+    },
+    "summary": {
+      "type": "string",
+      "maxLength": 500
+    },
+    "destination": {
+      "type": "object",
+      "required": ["country", "primaryCity"],
+      "properties": {
+        "country": {
+          "type": "string"
+        },
+        "primaryCity": {
+          "type": "string"
+        },
+        "coordinates": {
+          "type": "object",
+          "properties": {
+            "latitude": { "type": "number" },
+            "longitude": { "type": "number" }
+          }
+        }
+      }
+    },
+    "durationDays": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "pricing": {
+      "type": "object",
+      "required": ["currency", "baseNetRate", "recommendedRetailPrice"],
+      "properties": {
+        "currency": {
+          "type": "string",
+          "pattern": "^[A-Z]{3}$",
+          "description": "ISO 4217 three-letter currency code (e.g., USD, EUR, INR)"
+        },
+        "baseNetRate": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Wholesale cost supplied by the operator"
+        },
+        "recommendedRetailPrice": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Suggested public selling price"
+        },
+        "tierDiscounts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["minSeats", "discountPercent"],
+            "properties": {
+              "minSeats": { "type": "integer", "minimum": 1 },
+              "discountPercent": { "type": "number", "minimum": 0, "maximum": 100 }
+            }
+          }
+        }
+      }
+    },
+    "itinerary": {
