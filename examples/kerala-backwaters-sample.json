@@ -1,0 +1,60 @@
+{
+  "id": "e4eaaaf2-d142-4f0e-bc2e-128a1c97a89e",
+  "operatorId": "op-kerala-heritage-042",
+  "title": "4-Day Alleppey Backwaters & Munnar Tea Plantation Trail",
+  "summary": "Authentic private houseboat cruise through Vembanad Lake paired with a high-altitude tea estate trail in Munnar.",
+  "destination": {
+    "country": "India",
+    "primaryCity": "Alleppey",
+    "coordinates": {
+      "latitude": 9.4981,
+      "longitude": 76.3388
+    }
+  },
+  "durationDays": 4,
+  "pricing": {
+    "currency": "USD",
+    "baseNetRate": 480.00,
+    "recommendedRetailPrice": 650.00,
+    "tierDiscounts": [
+      {
+        "minSeats": 4,
+        "discountPercent": 10.0
+      },
+      {
+        "minSeats": 8,
+        "discountPercent": 17.5
+      }
+    ]
+  },
+  "itinerary": [
+    {
+      "dayNumber": 1,
+      "title": "Arrival in Kochi & Transfer to Alleppey Houseboat",
+      "description": "Private transfer from Cochin International Airport to Alleppey. Board traditional luxury houseboat for an overnight cruise through narrow canals.",
+      "mealsIncluded": ["lunch", "dinner"],
+      "activities": ["Canal Cruise", "Village Canoe Walk"]
+    },
+    {
+      "dayNumber": 2,
+      "title": "Vembanad Lake Sunrise & Drive to Munnar",
+      "description": "Morning cruise along paddy fields. Disembark at 10 AM and drive through scenic Cheeyappara Waterfalls to Munnar hill station.",
+      "mealsIncluded": ["breakfast", "dinner"],
+      "activities": ["Cheeyappara Sightseeing", "Tea Museum Visit"]
+    },
+    {
+      "dayNumber": 3,
+      "title": "Eravikulam National Park & Tea Plantation Trek",
+      "description": "Guided morning trek through Nilgiri Tahr sanctuary followed by a private tea tasting session at an organic estate.",
+      "mealsIncluded": ["breakfast", "lunch"],
+      "activities": ["Wildlife Trek", "Tea Tasting Workshop"]
+    },
+    {
+      "dayNumber": 4,
+      "title": "Scenic Viewpoints & Departure",
+      "description": "Visit Mattupetty Dam and Top Station viewpoint before private airport transfer back to Kochi.",
+      "mealsIncluded": ["breakfast"],
+      "activities": ["Mattupetty Boating", "Airport Dropoff"]
+    }
+  ]
+}
